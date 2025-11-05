@@ -6,8 +6,5 @@ namespace Demo_Layout
         {
             InitializeComponent();
         }
-
-
-
     }
 }
