@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Demo_Layout
 {
-    public partial class form_quậy: Form
+    public partial class form_quậy : Form
     {
         public form_quậy()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("cút ra");
         }
     }
 }
