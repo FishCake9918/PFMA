@@ -62,13 +62,17 @@
             button5 = new Button();
             button6 = new Button();
             pnlMenu = new Panel();
+            panel1 = new Panel();
+            picUserProfile = new PictureBox();
             panel2 = new Panel();
             button9 = new Button();
             button7 = new Button();
             button8 = new Button();
-            panel1 = new Panel();
+            pnlHienThi = new Panel();
             menuStrip1.SuspendLayout();
             pnlMenu.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picUserProfile).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -242,6 +246,7 @@
             button1.TabIndex = 0;
             button1.Text = "  Báo cáo";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -258,6 +263,7 @@
             button2.TabIndex = 1;
             button2.Text = "  Quản lý giao dịch";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -326,6 +332,7 @@
             // pnlMenu
             // 
             pnlMenu.BackColor = Color.FromArgb(82, 108, 91);
+            pnlMenu.Controls.Add(panel1);
             pnlMenu.Controls.Add(button6);
             pnlMenu.Controls.Add(button5);
             pnlMenu.Controls.Add(button4);
@@ -337,6 +344,28 @@
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(310, 662);
             pnlMenu.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveBorder;
+            panel1.Controls.Add(picUserProfile);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 582);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(310, 80);
+            panel1.TabIndex = 6;
+            // 
+            // picUserProfile
+            // 
+            picUserProfile.BackColor = SystemColors.ActiveBorder;
+            picUserProfile.Image = (Image)resources.GetObject("picUserProfile.Image");
+            picUserProfile.Location = new Point(12, 12);
+            picUserProfile.Name = "picUserProfile";
+            picUserProfile.Size = new Size(56, 56);
+            picUserProfile.SizeMode = PictureBoxSizeMode.Zoom;
+            picUserProfile.TabIndex = 2;
+            picUserProfile.TabStop = false;
+            picUserProfile.Click += pictureBox1_Click;
             // 
             // panel2
             // 
@@ -350,6 +379,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1232, 34);
             panel2.TabIndex = 0;
+            panel2.MouseDown += panel2_MouseDown;
             // 
             // button9
             // 
@@ -390,21 +420,21 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
-            // panel1
+            // pnlHienThi
             // 
-            panel1.BackColor = Color.FromArgb(220, 220, 187);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(310, 34);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(922, 662);
-            panel1.TabIndex = 3;
+            pnlHienThi.BackColor = Color.FromArgb(220, 220, 187);
+            pnlHienThi.Dock = DockStyle.Fill;
+            pnlHienThi.Location = new Point(310, 34);
+            pnlHienThi.Name = "pnlHienThi";
+            pnlHienThi.Size = new Size(922, 662);
+            pnlHienThi.TabIndex = 3;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1232, 696);
-            Controls.Add(panel1);
+            Controls.Add(pnlHienThi);
             Controls.Add(pnlMenu);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
@@ -418,6 +448,8 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             pnlMenu.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picUserProfile).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -461,6 +493,8 @@
         private Button button7;
         private Button button9;
         private Button button8;
+        private Panel pnlHienThi;
         private Panel panel1;
+        private PictureBox picUserProfile;
     }
 }
